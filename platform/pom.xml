@@ -11,6 +11,7 @@
 
     <modules>
         <module>poc-spring-boot-autoconfigure</module>
+        <module>poc-spring-boot-starter-health</module>
     </modules>
 
     <properties>
