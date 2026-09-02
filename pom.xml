@@ -10,7 +10,9 @@
     <packaging>pom</packaging>
 
     <properties>
-        <rewrite-maven-plugin.version>6.45.1</rewrite-maven-plugin.version>
+        <maven.compiler.release>21</maven.compiler.release>
+        <rewrite-maven-plugin.version>6.46.1</rewrite-maven-plugin.version>
+        <rewrite-migrate-java.version>3.42.1</rewrite-migrate-java.version>
     </properties>
 
     <modules>
@@ -24,6 +26,13 @@
                 <groupId>org.openrewrite.maven</groupId>
                 <artifactId>rewrite-maven-plugin</artifactId>
                 <version>${rewrite-maven-plugin.version}</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.openrewrite.recipe</groupId>
+                        <artifactId>rewrite-migrate-java</artifactId>
+                        <version>${rewrite-migrate-java.version}</version>
+                    </dependency>
+                </dependencies>
             </plugin>
         </plugins>
     </build>
